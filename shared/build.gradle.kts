@@ -65,6 +65,15 @@ kotlin {
     }
 }
 
+sqldelight {
+    databases {
+        create("QuickNoteDatabase") {
+            packageName.set("com.mahdiba97.quicknote.database")
+            sourceFolders.set(listOf("sqldelight"))
+        }
+    }
+}
+
 android {
     namespace = "com.mahdiba97.quicknote"
     compileSdk = 33
